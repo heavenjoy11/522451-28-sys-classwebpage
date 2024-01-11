@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/all.css">
 </head>
+<script>
+    function detectDevice() {
+        // 使用正则表达式检测是否为移动设备
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        // 如果是移动设备，弹出提示框
+        if (isMobile) {
+            alert("建议使用电脑打开,如强制使用手机打开，则会出现显示不全等问题");
+        }
+    }
+</script>
 
 <body>
     <!-- 侧边导航栏 -->
@@ -28,16 +38,6 @@
             <a href="#top" class="box"><i class="iconfont icon-chexiao" aria-hidden="true"></i><span>返回顶部</span></a>
         </div>
         <script src="./js/top-link.js"></script>
-        <script>
-            function detectDevice() {
-                // 使用正则表达式检测是否为移动设备
-                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-                // 如果是移动设备，弹出提示框
-                if (isMobile) {
-                    alert("建议使用电脑打开,如强制使用手机打开，则会出现显示不全等问题");
-                }
-            }
-        </script>
     </aside>
     <section class="container-1" id="container">
         <!-- 滚动贴合部分 -->
