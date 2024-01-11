@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    background-color: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: inherit;
+    user-select: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    cursor: default;
+}
+
+/*导航栏整体位置*/
+aside {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    width: 0;
+    height: 0;
+}
+
+
+/*导航栏整体大小，背景色*/
+.shell {
+    width: 20px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2bb7b3;
+    background-image: radial-gradient(at 92% 86%, hsla(148, 87%, 62%, 1) 0, hsla(148, 87%, 62%, 0) 50%),
+        radial-gradient(at 88% 17%, hsla(198, 95%, 63%, 1) 0, hsla(198, 95%, 63%, 0) 50%);
+    border-radius: 10px 0px 0px 10px;
+    /*导航变宽时的过度时间*/
+    transition: 0.3s;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    z-index: 9999;
+    transform: translate(0, -50%);
+}
+
+.box {
+    /*变成块级元素*/
+    display: block;
+    height: 15%;
+    width: 85%;
+    margin: 9px;
+    border-radius: 5px;
+    position: relative;
+    color: black;
+}
+
+.shell a i {
+    font-size: 20px;
+    position: absolute;
+    margin: 14px 0 0 7px;
+    color: black;
+    opacity: 0;
+}
+
+.shell:hover a i {
+    font-size: 20px;
+    position: absolute;
+    margin: 14px 0 0 7px;
+    color: black;
+    opacity: 1;
+}
+
+/*在导航第一个和第六个选项下加横线*/
+.box:nth-child(1)::before,
+.box:nth-child(5)::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(255, 247, 254);
+    position: absolute;
+    bottom: -10px;
+}
+
+/*导航文字设置*/
+.box span {
+    position: relative;
+    top: 14px;
+    left: 35px;
+    font-size: 15px;
+    /*导航收缩下文字透明不显示*/
+    opacity: 0;
+}
+
+/*导航栏变宽*/
+.shell:hover {
+    width: 150px;
+}
+
+/*当鼠标移到某一项时，背景变色*/
+.box:hover {
+    background-color: #9795f0;
+    color: #fff;
+}
+
+.box:hover .fa {
+    color: #fff;
+}
+
+/*动画效果*/
+.shell:hover span {
+    opacity: 1;
+}
+
+i {
+    font-size: 15px;
+}
+
+/*轮播结束*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+header {
+    position: relative;
+}
+
+.logo {
+    width: 350px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+.logo img {
+    width: 150px;
+    height: 150px;
+}
+
+.logo h2 {
+    line-height: 150px;
+    text-align: left;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 400;
+    font-family: "华文行楷";
+}
+
+body {
+    background-color: #e8e8e8;
+}
+
+.main-bg {
+    background-image: linear-gradient(to bottom, #2bb7b3, #e8e8e8);
+    height: 300px;
+    z-index: -1;
+}
+
+.news-big {
+    width: 980px;
+    height: 360px;
+    background-color: #fff;
+    margin: 0 auto;
+    z-index: 1;
+    margin-top: -100px;
+}
+
+.news-big-img {
+    height: 360px;
+    width: 640px;
+}
+
+.news-big-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-big-text {
+    width: 300px;
+    margin-left: 20px;
+}
+
+.news-big-text h2 {
+    padding: 20px 0px;
+    border-bottom: #afafaf 1px solid;
+}
+
+.news-big-text p {
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+h2:hover {
+    text-decoration: underline;
+}
+
+p:hover {
+    text-decoration: underline;
+    color: #2bb7b3;
+}
+
+.logo h2:hover {
+    text-decoration: none;
+}
+
+
+/* main */
+section {
+    margin-bottom: 30px;
+}
+
+main {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.main-title {
+    margin: 30px 0;
+    color: #2bb7b3;
+    z-index: 2;
+}
+
+.main-title h2:hover {
+    text-decoration: none;
+}
+
+.news {
+    height: 200px;
+    background: #fff;
+    border-bottom: #e8e8e8 2px solid;
+    position: relative;
+    
+}
+
+.news-img {
+    height: 180px;
+    width: 320px;
+    position: absolute;
+    top: 10px;
+    margin: 0 10px;
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.news-text {
+    width: 600px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 340px;
+    padding: 10px;
+}
+
+.news-text h2 {
+    margin-bottom: 10px;
+}
+
+.news-text p {
+    font-size: 16px;
+}
+
+.news-text span {
+    position: absolute;
+    bottom: 20px;
+    right: 60px;
+    color: #afafaf;
+    font-size: 14px;
+}
+
+.news-text span:hover {
+    color: #000;
+    font-weight: bold;
+}
+
+.title {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: -140px;
+    color: #2bb7b3;
+}
+
+.title h2:hover {
+    text-decoration: none;
+}
+
+/* foorter */
+footer {
+    background-color: #003f43;
+    background-image: url(../imgaes/ft-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+}
+
+.footer-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.footer-logo {
+    width: 100%;
+    position: absolute;
+    top: 3vh;
+    left: 0;
+    margin: 0 auto;
+}
+
+.footer-content a {
+    display: block;
+    width: 14vw;
+    height: 14vw;
+    margin: 0 auto;
+}
+
+.footer-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-p {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 8vh;
+    text-align: center;
+    display: block;
+}
+
+.footer-p p {
+    display: block;
+    margin-bottom: 2vh;
+}
+
+.footer-p span {
+    background-color: transparent;
+    color: #d5d5d5;
+    margin-right: 50px;
+}
+
+footer p:hover {
+    color: initial;
+    text-decoration: none;
+    cursor: default;
+}
